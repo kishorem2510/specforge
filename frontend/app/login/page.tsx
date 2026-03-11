@@ -50,7 +50,7 @@ export default function LoginPage() {
         <h2 className="text-3xl font-bold text-white mb-4">
           Turn messy requirements into <span className="text-purple-400">developer-ready specs</span>
         </h2>
-        <p className="text-gray-400 mb-10">Powered by LangChain + Flan-T5</p>
+        <p className="text-gray-400 mb-10">Powered by LangChain + Groq</p>
 
         <div className="space-y-4">
           {[
