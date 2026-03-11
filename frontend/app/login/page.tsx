@@ -3,13 +3,14 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 import toast from "react-hot-toast";
-import { Bot, Sparkles, Zap, Shield } from "lucide-react";
+import { Bot, Sparkles, Zap, Shield, Eye, EyeOff } from "lucide-react";
 
 export default function LoginPage() {
   const router = useRouter();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleLogin = async () => {
     if (!username.trim() || !password.trim()) {
@@ -88,17 +89,25 @@ export default function LoginPage() {
               />
             </div>
 
-            <div>
-              <label className="text-gray-400 text-sm mb-1 block">Password</label>
-              <input
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                onKeyDown={(e) => e.key === "Enter" && handleLogin()}
-                placeholder="Enter your password"
-                className="w-full bg-[#1a1a2e] border border-purple-900/50 rounded-xl px-4 py-3 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-purple-500 transition"
-              />
-            </div>
+           <div>
+  <label className="text-gray-400 text-sm mb-1 block">Password</label>
+  <div className="relative">
+    <input
+      type={showPassword ? "text" : "password"}
+      value={password}
+      onChange={(e) => setPassword(e.target.value)}
+      onKeyDown={(e) => e.key === "Enter" && handleLogin()}
+      placeholder="Enter your password"
+      className="w-full bg-[#1a1a2e] border border-purple-900/50 rounded-xl px-4 py-3 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-purple-500 transition pr-12"
+    />
+    <button
+      onClick={() => setShowPassword(!showPassword)}
+      className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-purple-400 transition"
+    >
+      {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+    </button>
+  </div>
+</div>
 
             <button
               onClick={handleLogin}
