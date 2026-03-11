@@ -8,12 +8,12 @@
 
 | | URL |
 |---|---|
-| 🌐 **Frontend (Live App)** | https://specforge-frontend.vercel.app |
+| 🌐 **Frontend (Live App)** | https://specforge-beige.vercel.app |
 | ⚙️ **Backend API** | https://kishorem2510-specforge-backend.hf.space |
 | 📖 **API Docs (Swagger)** | https://kishorem2510-specforge-backend.hf.space/docs |
 | 💻 **GitHub Repository** | https://github.com/kishorem2510/specforge |
 
-> ⚠️ Update these URLs after deployment
+> 
 
 ---
 
