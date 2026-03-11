@@ -1,0 +1,16 @@
+fastapi==0.115.11
+uvicorn==0.34.0
+sqlalchemy==2.0.48
+python-jose[cryptography]==3.5.0
+passlib[bcrypt]==1.7.4
+bcrypt==4.0.1
+python-multipart==0.0.22
+langchain==0.3.20
+langchain-core==0.3.51
+langchain-huggingface==0.1.2
+transformers==4.46.0
+torch==2.1.0
+huggingface-hub==0.26.0
+tokenizers==0.20.3
+pydantic==2.10.6
+numpy<2
