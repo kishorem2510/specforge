@@ -19,7 +19,7 @@ export default function SignupPage() {
     }
     setLoading(true);
     try {
-      await axios.post("http://127.0.0.1:8000/signup", {
+      await axios.post("https://kishorem2510-specforge-backend.hf.space/signup", {
         username,
         email,
         password,

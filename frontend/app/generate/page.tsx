@@ -39,7 +39,7 @@ export default function GeneratePage() {
     try {
       const token = localStorage.getItem("token");
       const res = await axios.post(
-        "http://127.0.0.1:8000/generate",
+        "https://kishorem2510-specforge-backend.hf.space/generate",
         { requirements },
         { headers: { Authorization: `Bearer ${token}` } }
       );
